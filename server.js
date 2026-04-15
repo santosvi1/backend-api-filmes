@@ -13,4 +13,8 @@ app.use(express.json());
 app.use(cors());
 app.use(routers);
 
+app.get('/', (req, res) =>{
+    res.send('API de filmes rodando')
+})
+
 app.listen(PORT, () => console.log("Servidor rodando na porta", PORT));
